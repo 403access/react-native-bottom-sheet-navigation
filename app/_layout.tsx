@@ -59,9 +59,13 @@ function RootLayoutNav() {
         <ThemeProvider
           value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
         >
-          <Stack>
+          <Stack initialRouteName="(tabs)">
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+            <Stack.Screen name="modal" options={{ presentation: "formSheet" }} />
+            <Stack.Screen
+              name="(somegroup)"
+              options={{ presentation: "formSheet" }}
+            />
           </Stack>
         </ThemeProvider>
       </BottomSheetModalProvider>
