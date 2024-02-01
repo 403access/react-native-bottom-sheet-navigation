@@ -5,11 +5,29 @@ export function MonoText(props: TextProps) {
 }
 
 export function DroidSansText(props: TextProps) {
-  return <Text {...props} style={[props.style, { fontFamily: "DroidSans" }]} />;
+  return (
+    <Text
+      {...props}
+      style={[
+        props.style,
+        {
+          fontFamily: "DroidSans",
+        },
+      ]}
+    />
+  );
 }
 
 export function DroidSansBoldText(props: TextProps) {
   return (
-    <Text {...props} style={[props.style, { fontFamily: "DroidSansBold" }]} />
+    <Text
+      {...props}
+      style={[
+        props.style,
+        {
+          fontFamily: "DroidSansBold",
+        },
+      ]}
+    />
   );
 }
