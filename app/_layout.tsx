@@ -7,7 +7,7 @@ import {
   ThemeProvider,
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
+import { Slot, Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 
@@ -61,12 +61,61 @@ function RootLayoutNav() {
         <ThemeProvider
           value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
         >
-          <Stack initialRouteName="(tabs)">
+          {/* <Slot /> */}
+          {/* stack-tabs-stack */}
+          {/* <Stack initialRouteName="modal">
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="modal" options={{ presentation: "formSheet" }} />
+            <Stack.Screen name="modal" options={{ presentation: "modal" }} />
             <Stack.Screen
               name="(somegroup)"
-              options={{ presentation: "formSheet" }}
+              options={{
+                headerShown: true,
+                // presentation: "modal",
+              }}
+            />
+          </Stack> */}
+
+          {/* demo-1 */}
+          {/* <Stack
+            initialRouteName="demo-1/(tabs)"
+            screenOptions={{ headerShown: false }}
+          >
+            <Stack.Screen
+              name="demo-1/(tabs)"
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="(modals)/highest-level-modal"
+              options={{ presentation: "modal" }}
+            />
+          </Stack> */}
+
+          {/* demo-2 */}
+          {/* <Stack initialRouteName="demo-2/(tabs)">
+            <Stack.Screen name="demo-2" options={{ headerShown: false }} />
+            <Stack.Screen
+              name="(modals)/highest-level-modal"
+              options={{ presentation: "modal" }}
+            />
+          </Stack> */}
+
+          {/* demo-3 */}
+          <Stack
+            initialRouteName="demo-3/(tabs)"
+            screenOptions={{ headerShown: false }}
+          >
+            <Stack.Screen
+              name="demo-3/(tabs)"
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="(modals)/highest-level-modal"
+              options={{ presentation: "modal" }}
+            />
+            <Stack.Screen
+              name="(modal-with-navigation)"
+              // name="(modal-with-navigation)/modal-stack-one"
+              options={{ presentation: "modal" }}
             />
           </Stack>
         </ThemeProvider>

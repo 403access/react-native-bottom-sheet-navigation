@@ -28,13 +28,12 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="tab-one"
         options={{
           title: "Tab One",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            // <Link href="/modal" asChild>
-            <Link href="/(somegroup)" asChild>
+          headerLeft: () => (
+            // <Link href="/(somegroup)" asChild>
+            <Link href="/" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
@@ -47,10 +46,26 @@ export default function TabLayout() {
               </Pressable>
             </Link>
           ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          // headerRight: () => (
+          //   // <Link href="/(somegroup)" asChild>
+          //   <Link href="/demo-two/tab-modal" asChild>
+          //     <Pressable>
+          //       {({ pressed }) => (
+          //         <FontAwesome
+          //           name="info-circle"
+          //           size={25}
+          //           color={Colors[colorScheme ?? "light"].text}
+          //           style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+          //         />
+          //       )}
+          //     </Pressable>
+          //   </Link>
+          // ),
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="tab-two"
         options={{
           title: "Tab Two",
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,

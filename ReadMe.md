@@ -1,3 +1,16 @@
+# Demo 1
+
+- (Stack ->) Tabs -> Modal
+
+# Demo 2
+
+- (Stack ->) Stack -> Tabs -> Modal
+
+# Demo 3
+
+- (Stack ->) Tabs -> Stack -> Modal
+
+
 # Test react-native-bottom-sheet and Expo Router 3
 
 - Expo SDK 50
