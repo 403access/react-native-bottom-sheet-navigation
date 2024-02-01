@@ -21,7 +21,7 @@ export {
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: "(tabs)",
+  initialRouteName: "index",
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -62,7 +62,41 @@ function RootLayoutNav() {
         <ThemeProvider
           value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
         >
-          <Slot />
+          {/* <Slot /> */}
+
+          <Stack
+            initialRouteName="index"
+            screenOptions={{ headerShown: false }}
+          >
+            <Stack.Screen
+              name="index"
+              options={{ headerShown: false }}
+            />
+
+            <Stack.Screen
+              name="demo-1/(tabs)"
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen name="demo-2" options={{ headerShown: false }} />
+            <Stack.Screen
+              name="demo-3/(tabs)"
+              options={{ headerShown: false }}
+            />
+
+            <Stack.Screen
+              name="modal"
+              options={{ presentation: "modal" }}
+            />
+            <Stack.Screen
+              name="(modals)/highest-level-modal"
+              options={{ presentation: "modal" }}
+            />
+            <Stack.Screen
+              name="(modal-with-navigation)"
+              // name="(modal-with-navigation)/modal-stack-one"
+              options={{ presentation: "modal" }}
+            />
+          </Stack>
         </ThemeProvider>
       </BottomSheetModalProvider>
     </GestureHandlerRootView>

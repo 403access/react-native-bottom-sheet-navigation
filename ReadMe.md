@@ -10,6 +10,11 @@
 
 - (Stack ->) Tabs -> Stack -> Modal
 
+# Pitfalls
+
+- `index.[ios|android|native|web].tsx` not possible
+- instead import a component that is split, see [Startup](./components/startup/).
+- index.tsx needed
 
 # Test react-native-bottom-sheet and Expo Router 3
 
